@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000; 
+    color: #fff; 
+}
+
+.apper {
+    max-width: 50%; 
+    margin-left: 4%;
+    margin-top: 8%;
+    animation: slideIn 1s ease-out;
+}
+
+.clickable-heading {
+    text-decoration: none; 
+    color: #FFD700; 
+}
+
+.apper h1 {
+    font-size: 48px; 
+    color: #FFD700; 
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.apper h1:hover {
+    color: #fff;
+}
+
+.apper p {
+    color: #bbb; 
+    line-height: 1.6; 
+    font-size: 22px; 
+    text-align: justify; 
+    margin-bottom: 20px; 
+}
+
+.apper a:hover {
+    background: #fff; 
+    color: #000; 
+}
+
+.perpetual {
+    width: 35%; 
+    height: auto; 
+    position: fixed; 
+    top: 120px; 
+    right: 30px; 
+    border-radius: 20px; 
+    animation: slideUp 1s ease-out;
+}
+
+.navigation {
+    position: fixed;
+    top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 10;
+}
+
+.home-btn, .next-btn {
+    color: #fff;
+    background-color: #FFD700;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.home-btn:hover, .next-btn:hover {
+    background-color: #fff;
+    color: #FFD700;
+}
+
+
+@media (max-width: 1024px) {
+    .apper {
+        max-width: 60%;
+        margin-left: 5%;
+        margin-top: 10%;
+    }
+
+    .apper h1 {
+        font-size: 40px;
+    }
+
+    .perpetual {
+        width: 40%;
+        top: 100px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .apper {
+        max-width: 90%;
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+
+    .apper h1 {
+        font-size: 32px;
+    }
+
+    .apper p {
+        font-size: 18px;
+    }
+
+    .perpetual {
+        width: 50%;
+        position: relative;
+        top: auto;
+        right: auto;
+        margin: 20px auto;
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .apper h1 {
+        font-size: 28px;
+    }
+
+    .apper p {
+        font-size: 16px;
+    }
+
+    .perpetual {
+        width: 70%;
+        margin: 20px auto;
+    }
+}
+
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        bottom: -300px;
+        opacity: 0;
+    }
+    to {
+        bottom: 0;
+        opacity: 1;
+    }
+}
